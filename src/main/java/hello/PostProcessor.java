@@ -20,13 +20,13 @@ public class PostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object o, String s) throws BeansException {
-        System.out.println("Post processing before");
+//        System.out.println("Post processing before");
         return o;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object o, String s) throws BeansException {
-        System.out.println("Post processing after");
+//        System.out.println("Post processing after");
         return o;
     }
 }

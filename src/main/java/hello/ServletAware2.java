@@ -9,18 +9,14 @@ import javax.servlet.ServletContext;
  * Created by Devon on 2017-02-08.
  */
 @Component
-public class ServletAware implements ServletContextAware {
-
-    public ServletAware() {
-        System.out.println("Initing servlet aware");
-    }
+public class ServletAware2 implements ServletContextAware {
 
     /**
-     * I never get called because I get initialized during a BeanPostProcessor initialization
+     * I do get called because I get instantiated during normal bean creation
      * @param servletContext
      */
     @Override
     public void setServletContext(ServletContext servletContext) {
-        System.out.println("Setting servlet context to: " + servletContext);
+        System.out.println("Setting servlet context in ServletAware2");
     }
 }
